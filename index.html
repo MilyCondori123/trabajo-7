@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice</title>
+    <style>
+     body {
+    background-color: rgb(60, 60, 60);
+    color: rgb(184, 184, 184);
+    padding: 20px; /* Margen interior para el body */
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none; /* Quitar subrayado */
+}
+
+h1, h2 {
+    font-family: 'Bangers', cursive;
+    color: rgb(255, 255, 255);
+    margin: 0; /* Eliminando el valor de margen en 0px */
+    text-shadow: 
+        0 0 10px cyan,
+        0 0 20px cyan;
+}
+
+/* Estilos para los botones */
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0; /* Margen vertical entre los botones */
+    background: transparent; /* Fondo transparente */
+    color: white; /* Color del texto */
+    border: 2px solid transparent; /* Borde transparente para mantener el tamaño */
+    border-radius: 15px; /* Esquinas redondeadas */
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Oculta cualquier parte del pseudo-elemento que sobresalga */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra de fondo */
+}
+
+/* Pseudo-elemento para el gradiente de sombra */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    border-radius: 15px; /* Esquinas redondeadas */
+    z-index: -1; /* Envía el pseudo-elemento detrás del botón */
+    background: linear-gradient(to right, blue, red); /* Gradiente */
+    filter: blur(8px); /* Desenfoque para simular una sombra */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la visibilidad */
+}
+
+/* Estilo hover para los botones */
+.btn:hover::before {
+    opacity: 1; /* Muestra el gradiente al hacer hover */
+}
+
+/* Estado activo */
+.btn:active {
+    background-color: rgb(255, 165, 0); /* Color de fondo al hacer clic */
+}
+    </style>
+</head>
+<body>
+    <h1>Índice</h1>
+    <br>
+    <hr>
+    <br>
+    <h2>Ejercicios Resueltos</h2>
+    <a href="ejercicioresuelto01.php" class="btn">Ejercicio 1: Declarar Variables y Tipos de Datos en PHP</a>
+    <a href="ejercicioresuelto02.php" class="btn">Ejercicio 2: Uso de Estructuras Condicionales</a>
+    
+    <h2>Ejercicios Propuestos</h2>
+    <a href="ejerciciopropuesto01.php" class="btn">Ejercicio 01</a>
+    <a href="ejerciciopropuesto02.html" class="btn">Ejercicio 02</a>
+
+    <p><i><b>Autor: Milagros Loida Hanca</b></i></p>
+</body>
+</html>
